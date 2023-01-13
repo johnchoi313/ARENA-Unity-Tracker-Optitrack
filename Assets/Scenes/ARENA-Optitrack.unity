@@ -223,10 +223,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d66983bdce58f444c80c144fe60833d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mappings:
-    m_keys:
-    - Box
-    m_values: 0b000000
+  optitrackArenaObjects:
+  - obj: {fileID: 0}
+    name: Box
+    rigidBodyId: 11
+    connected: 0
   osc: {fileID: 313682925}
 --- !u!1 &306014944
 GameObject:

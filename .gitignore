@@ -8,6 +8,9 @@
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # [Aa]ssets/AssetStoreTools*
 
+# Gotta remove this!
+.arena_mqtt_auth.txt
+
 # Visual Studio cache directory
 .vs/
 
