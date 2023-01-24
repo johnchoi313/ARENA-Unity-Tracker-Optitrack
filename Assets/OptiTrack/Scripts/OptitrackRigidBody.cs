@@ -83,8 +83,13 @@ public class OptitrackRigidBody : MonoBehaviour
         OptitrackRigidBodyState rbState = StreamingClient.GetLatestRigidBodyState( RigidBodyId, NetworkCompensation);
         if ( rbState != null )
         {
-            this.transform.localPosition = rbState.Pose.Position;
-            this.transform.localRotation = rbState.Pose.Orientation;
+            this.transform.localPosition = new Vector3(-rbState.Pose.Position.x, rbState.Pose.Position.y, -rbState.Pose.Position.z);
+            //do 180-z (x?) ACTUALLY Y!
+
+
+            Vector3 newEuler = rbState.Pose.Orientation.eulerAngles;
+
+            this.transform.localRotation = Quaternion.Euler(newEuler.x, newEuler.y+180, -newEuler.z); //rbState.Pose.Orientation;
         }
     }
 }
