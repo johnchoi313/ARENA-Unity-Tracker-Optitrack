@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//-------------------------------------//
 [System.Serializable]
 public class OptitrackArenaObject {
 
@@ -35,13 +36,12 @@ public class OptitrackArenaObject {
     }
 }
 
+//-------------------------------------//
 public class Optitracker : MonoBehaviour {
 
     public List<OptitrackArenaObject> optitrackArenaObjects;
 
     public OptitrackStreamingClient osc;
-
-
 
     public void ConnectAllOptitrack() {
         foreach(OptitrackArenaObject optitrackArenaObject in optitrackArenaObjects) {             
@@ -54,8 +54,6 @@ public class Optitracker : MonoBehaviour {
         }
     }
 
-
-
     // Start is called before the first frame update
     void Start() {
         
@@ -67,7 +65,5 @@ public class Optitracker : MonoBehaviour {
         if(Input.GetKeyDown(KeyCode.Space)) {
             ConnectAllOptitrack();
         }
-
-
     }
 }
