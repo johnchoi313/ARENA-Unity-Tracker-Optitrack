@@ -10,6 +10,23 @@ public class Optitracker : MonoBehaviour {
 
     public OptitrackStreamingClient osc;
 
+
+    public void CreateOptitrackObject () {
+
+    }
+    public void DeleteOptitrackObject () {
+
+    }
+    
+    public void SaveOptitrackObjects() {
+
+    }
+    public void LoadOptitrackObjects() {
+        
+    }
+
+
+
     public void ConnectAllOptitrack() {
         foreach(OptitrackArenaObject optitrackArenaObject in optitrackArenaObjects) {             
             optitrackArenaObject.ConnectOptitrack(osc);

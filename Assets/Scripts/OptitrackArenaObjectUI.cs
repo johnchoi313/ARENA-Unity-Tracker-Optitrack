@@ -3,8 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //-------------------------------------//
+
+public class OptitrackArenaObjectUI: MonoBehaviour {
+    public OptitrackArenaObject optitrackArenaObject;
+
+
+
+}
+
+
+
 [System.Serializable]
-public class OptitrackArenaObject{
+public class OptitrackArenaObject {
 
     public GameObject obj;
     public string name; 
