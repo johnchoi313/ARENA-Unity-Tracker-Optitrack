@@ -409,8 +409,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   optitrackArenaObjects:
   - obj: {fileID: 0}
-    name: Box
-    rigidBodyId: 13
+    name: Cone
+    rigidBodyId: 18
     connected: 0
     angleOffsets: {x: 0, y: 0, z: 0}
     positionOffsets: {x: 0, y: 0, z: 0}

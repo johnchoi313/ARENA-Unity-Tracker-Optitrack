@@ -60,7 +60,7 @@ public class OptitrackRigidBody : MonoBehaviour {
             //Have to flip Z angle and add 180 to Y angle to match ARENA:
             Vector3 newEuler = rbState.Pose.Orientation.eulerAngles + angleOffsets;
             
-            this.transform.localRotation = Quaternion.Euler(newEuler.x, newEuler.y+180, -newEuler.z); //rbState.Pose.Orientation;
+            this.transform.localRotation = Quaternion.Euler(-newEuler.x, newEuler.y, -newEuler.z); //rbState.Pose.Orientation;
         }
     }
 }
