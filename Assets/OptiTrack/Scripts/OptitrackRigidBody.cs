@@ -30,6 +30,7 @@ public class OptitrackRigidBody : MonoBehaviour {
     public Vector3 angleOffsets;
     public Vector3 positionOffsets;
 
+    public bool flip = true;
 
     void Start() {
         // If the user didn't explicitly associate a client, find a suitable default.
@@ -55,8 +56,13 @@ public class OptitrackRigidBody : MonoBehaviour {
         if ( rbState != null ) {
             
             //Have to flip X and Z position to match ARENA:
-            this.transform.localPosition = new Vector3(-rbState.Pose.Position.x, rbState.Pose.Position.y, -rbState.Pose.Position.z) + positionOffsets;
+            if(flip) {
+                this.transform.localPosition = new Vector3(-rbState.Pose.Position.x, rbState.Pose.Position.y, -rbState.Pose.Position.z) + positionOffsets;
+            } else {
+                this.transform.localPosition = new Vector3(rbState.Pose.Position.x, rbState.Pose.Position.y, rbState.Pose.Position.z) + positionOffsets;    
+            }
             
+
             //Have to flip Z angle and add 180 to Y angle to match ARENA:
             Vector3 newEuler = rbState.Pose.Orientation.eulerAngles + angleOffsets;
             
