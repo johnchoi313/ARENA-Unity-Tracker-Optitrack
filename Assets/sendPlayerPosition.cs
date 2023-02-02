@@ -10,18 +10,20 @@ public class sendPlayerPosition : MonoBehaviour {
 
     public int state = 0; //0 = idle | 1 = walk | 2 = fly
 
+    public string tag = "";
+
     // Update is called once per frame
     void Update() {
         OscMessage message = new OscMessage();
 
         pos = transform.position;
 
-        message.address = "/playerXY"; //actually sending X and Z position, Unity uses Y as vertical
+        message.address = "/playerXY_" + tag; //actually sending X and Z position, Unity uses Y as vertical
         message.values.Add(pos.x);
         message.values.Add(pos.z);
         osc.Send(message);
 
-        message.address = "/playerZ";
+        message.address = "/playerZ_" + tag;
         message.values.Add(pos.y);
         osc.Send(message);
 
@@ -33,7 +35,7 @@ public class sendPlayerPosition : MonoBehaviour {
         osc.Send(message);
         */
 
-        message.address = "/state";
+        message.address = "/state_" + tag;
         message.values.Add(state);
         osc.Send(message);
     }
