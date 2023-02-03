@@ -5163,7 +5163,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1037528981}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9490,7 +9490,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3073751487709531122}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.394, y: 0.5, z: -1.93}
+  m_LocalPosition: {x: -0.394, y: 0, z: -1.93}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9559,7 +9559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d744611473403c4c942a303982b065e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pigeonName: 
+  pigeonName: '[NPC] Pigeon-walk'
   pigeon: {fileID: 0}
   attached: 0
   spp: {fileID: 1281249194}
@@ -9582,7 +9582,7 @@ MonoBehaviour:
   - {fileID: 1396642334}
   target: {fileID: 0}
   moving: 0
-  moveSpeed: 1
+  moveSpeed: 0.1
   idleTimer: 0
-  idleTimeMin: 3
-  idleTimeMax: 10
+  idleTimeMin: 1
+  idleTimeMax: 3
