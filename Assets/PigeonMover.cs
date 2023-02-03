@@ -40,6 +40,7 @@ public class PigeonMover : MonoBehaviour {
         } else {
             pigeon.transform.position = transform.position;
             pigeon.transform.rotation = transform.rotation;
+            pigeon.transform.Rotate(0,180,0);
         }
 
         //If Moving, then move closer to target
