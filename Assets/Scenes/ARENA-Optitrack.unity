@@ -409,14 +409,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   optitrackArenaObjects:
   - obj: {fileID: 0}
-    name: tablet1
-    rigidBodyId: 1
+    name: Box
+    rigidBodyId: 19
     connected: 0
     angleOffsets: {x: 0, y: 0, z: 0}
     positionOffsets: {x: 0, y: 0, z: 0}
   - obj: {fileID: 0}
-    name: tablet2
-    rigidBodyId: 2
+    name: Box2
+    rigidBodyId: 20
     connected: 0
     angleOffsets: {x: 0, y: 0, z: 0}
     positionOffsets: {x: 0, y: 0, z: 0}
@@ -4734,8 +4734,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   authType: 1
   hostAddress: mqtt.arenaxr.org
-  namespaceName: etc
-  sceneName: DemoRoom
+  namespaceName: public
+  sceneName: arena
   renderCameras: 0
   logMqttObjects: 0
   logMqttUsers: 0
