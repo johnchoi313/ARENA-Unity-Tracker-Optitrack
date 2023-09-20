@@ -415,14 +415,14 @@ MonoBehaviour:
     angleOffsets: {x: 0, y: 0, z: 0}
     positionOffsets: {x: 0, y: 0, z: 0}
   - obj: {fileID: 0}
-    name: Box2
-    rigidBodyId: 20
+    name: Optitrack_Handlight_Box
+    rigidBodyId: 15
     connected: 0
     angleOffsets: {x: 0, y: 0, z: 0}
     positionOffsets: {x: 0, y: 0, z: 0}
   - obj: {fileID: 0}
-    name: tablet3
-    rigidBodyId: 3
+    name: Optitrack_Flashlight_Box
+    rigidBodyId: 16
     connected: 0
     angleOffsets: {x: 0, y: 0, z: 0}
     positionOffsets: {x: 0, y: 0, z: 0}
@@ -4741,7 +4741,7 @@ MonoBehaviour:
   logMqttUsers: 0
   logMqttEvents: 0
   logMqttNonPersist: 0
-  camUpdateIntervalMs: 100
+  globalUpdateMs: 100
 --- !u!1 &1197816163
 GameObject:
   m_ObjectHideFlags: 0
@@ -5391,8 +5391,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2045998837}
   m_HandleRect: {fileID: 2045998836}
   m_Direction: 2
-  m_Value: 1.0000004
-  m_Size: 0.843
+  m_Value: 1
+  m_Size: 0.84300005
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
