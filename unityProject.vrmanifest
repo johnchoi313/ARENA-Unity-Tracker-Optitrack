@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.arenaoptitrackunity.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\Wiselab\\Documents\\GitHub\\ARENA-Optitrack-Unity\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "ARENA-Optitrack-ZED-Vive-Apriltag-Unity [Testing]"
+        }
+      }
+    }
+  ]
+}
