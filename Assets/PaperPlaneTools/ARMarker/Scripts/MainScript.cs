@@ -54,6 +54,7 @@ namespace PaperPlaneTools.AR {
 
 
 		protected override void Awake() {
+			
 			/*
 			int cameraIndex = -1;
 			for (int i = 0; i < WebCamTexture.devices.Length; i++) {
@@ -67,18 +68,31 @@ namespace PaperPlaneTools.AR {
 				}
 			}
 			*/
+			
 
 			if (cameraIndex >= 0) {
 				DeviceName = WebCamTexture.devices [cameraIndex].name;
-				//webCamDevice = WebCamTexture.devices [cameraIndex];
+				webCamDevice = WebCamTexture.devices [cameraIndex];
 			}
 		}
 
+		/*
 		protected override bool ProcessTexture(WebCamTexture input, ref Texture2D output) {
 			Mat img = Unity.TextureToMat (input, TextureParameters);
 			ProcessFrame(img, img.Cols, img.Rows);
 			output = Unity.MatToTexture(img, output);
 			return true;
+		}
+		*/
+		
+		protected override bool ProcessTexture(WebCamTexture input, ref Texture2D output) {
+			var texture = new Texture2D(input.width, input.height);
+            texture.SetPixels(input.GetPixels());
+            var img = Unity.TextureToMat(input, Unity.TextureConversionParams.Default);
+            ProcessFrame(img, img.Cols, img.Rows);
+            output = Unity.MatToTexture(img, output);
+
+            return true;
 		}
 
 		private void ProcessFrame (Mat mat, int width, int height) {

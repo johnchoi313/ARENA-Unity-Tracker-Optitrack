@@ -13,8 +13,7 @@
 		/// <summary>
 		/// Initializes a new instance of the <see cref="PaperPlaneTools.AR.MarkerDetector"/> class.
 		/// </summary>
-		public MarkerDetector() {
-		}
+		public MarkerDetector() { }
 
 
 		/// <summary>
@@ -46,7 +45,7 @@
 			// Detect markers
 			CvAruco.DetectMarkers (grayMat, dictionary, out corners, out ids, detectorParameters, out rejectedImgPoints);
 
-//			CvAruco.DrawDetectedMarkers (mat, corners, ids);
+			CvAruco.DrawDetectedMarkers (mat, corners, ids); //show debug
 
 			float markerSizeInMeters = 1f;
 
@@ -81,7 +80,8 @@
 
 				Cv2.SolvePnP(markerPoints, corners[i], cameraMatrix, distCoeffs, out rvec, out tvec, false, SolvePnPFlags.Iterative);
 
-//				CvAruco.DrawAxis(mat, cameraMatrix, distCoeffs, rvec, tvec, 1.0f);
+				CvAruco.DrawAxis(mat, cameraMatrix, distCoeffs, rvec, tvec, 1.0f); //show debug
+
 				Cv2.Rodrigues (rvec, out rotMat);
 				Matrix4x4 matrix = new Matrix4x4();
 				matrix.SetRow(0, new Vector4((float)rotMat[0, 0], (float)rotMat[0, 1], (float)rotMat[0, 2], (float)tvec[0]));
